@@ -1,0 +1,65 @@
+:root {
+  // Typography styles guide (font-sizes - headings)
+  --display-hd: 12rem;
+  --hd-01: 6.4rem;
+  --hd-02: 4rem;
+  --hd-03: 2.4rem;
+  --hd-04: 1.6rem;
+
+  // Typography styles guide (font-sizes - body)
+  --bd: 1.6rem;
+  --bd-sm: 1.2rem;
+  --bd-xs: 0.8rem;
+
+  // Typography styles guide (line-heights - headings)
+  --lh-display: 12.8rem;
+  --lh-hd-01: 7.2rem;
+  --lh-hd-02: 4.8rem;
+  --lh-hd-03: 3.2rem;
+  --lh-hd-04: 2.4rem;
+
+  // Typography styles guide (line-heights - body)
+  --lh-bd: 2.4rem;
+  --lh-bd-sm: 1.6rem;
+  --lh-bd-xs: 1.2rem;
+
+  // Typography styles guide (font-weights)
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+
+  // Color styles (Primary colors)
+  --cl-p-900: hsl(155, 85%, 10%);
+  --cl-p-800: hsl(155, 85%, 20%);
+  --cl-p-700: hsl(155, 85%, 31%);
+  --cl-p-600: hsl(155, 85%, 41%);
+  --cl-p-500: hsl(155, 89%, 51%);
+  --cl-p-400: hsl(155, 89%, 61%);
+  --cl-p-300: hsl(155, 89%, 71%);
+  --cl-p-200: hsl(155, 88%, 80%);
+  --cl-p-100: hsl(155, 88%, 90%);
+
+  // Color styles (Grey colors)
+  --cl-g-900: hsl(240, 4%, 9%);
+  --cl-g-800: hsl(240, 4%, 15%);
+  --cl-g-700: hsl(240, 4%, 22%);
+  --cl-g-600: hsl(240, 4%, 29%);
+  --cl-g-500: hsl(240, 4%, 35%);
+  --cl-g-400: hsl(240, 4%, 42%);
+  --cl-g-300: hsl(240, 4%, 48%);
+  --cl-g-200: hsl(240, 4%, 55%);
+  --cl-g-100: hsl(240, 4%, 61%);
+  --cl-g-100-tr: hsla(240, 4%, 61%, 0.5);
+
+  --cl-white: hsl(0, 0%, 100%);
+  --cl-cultured: hsl(0, 0%, 99%);
+
+  // Box Shadows
+  --bx-sd-01: 0 0.3rem 0.6rem hsla(0, 0%, 0%, 0.16);
+  --bx-sd-02: 0 1.5rem 2rem hsla(0, 0%, 0%, 0.1);
+  --bx-sd-03: 0 3rem 4rem hsla(0, 0%, 0%, 0.05);
+  --bx-sd-04: 0 2.5rem 5rem hsla(155, 89%, 51%, 0.15);
+
+  // Spacing
+}
