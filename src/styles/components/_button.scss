@@ -1,0 +1,38 @@
+.btn {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem 3.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+
+  & > *:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+
+  &__primary {
+    font-weight: 600;
+    padding: 1.6rem 4.8rem;
+    background-color: var(--cl-p-500);
+    transition: all 0.4s linear;
+
+    &:hover {
+      background-color: var(--cl-p-600);
+    }
+
+    @include respond(tablet-port) {
+      padding: 1.2rem 3.2rem;
+    }
+  }
+
+  &__dark {
+    background-color: var(--cl-g-900);
+    color: var(--cl-white);
+  }
+
+  &__no-bg {
+    background: none;
+    padding: 0;
+  }
+}

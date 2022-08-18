@@ -1,0 +1,235 @@
+.header {
+  background-image: linear-gradient(
+      rgba(22, 22, 24, 0.4),
+      rgba(22, 22, 24, 0.4)
+    ),
+    url(../assets/hero-01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 66.4rem;
+
+  // border: 0.01rem solid transparent;
+  &__hero {
+    margin-top: 20vh;
+
+    h1 {
+      margin-bottom: 1.2rem;
+    }
+
+    p {
+      margin-bottom: 5.6rem;
+
+      @include respond(tablet-port) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+}
+
+.listen-to-music {
+  &__section {
+    padding: 8rem 0;
+
+    h2 {
+      max-width: 74.7rem;
+      font-size: clamp(4rem, 6vw, 6.4rem);
+      line-height: clamp(4.8rem, 6.4vw, 7.2rem);
+      margin-bottom: 2.4rem;
+    }
+
+    p {
+      max-width: 55.2rem;
+      margin-bottom: 8rem;
+    }
+  }
+
+  &__imgs {
+    display: flex;
+    max-width: 50%;
+
+    @include respond(laptop) {
+      max-width: 100%;
+    }
+
+    img {
+      display: block;
+      flex: 0 0 50%;
+      width: 50%;
+    }
+  }
+}
+
+.listen-xperience {
+  position: relative;
+  overflow: hidden;
+
+  &__img {
+    position: absolute;
+    right: -9.6rem;
+    bottom: 0;
+    height: 90%;
+
+    @include respond(laptop) {
+      display: none;
+    }
+  }
+}
+
+.personalized-xperience {
+  &__section {
+    padding-bottom: 10.4rem;
+  }
+
+  &__caption {
+    text-align: center;
+    margin-bottom: 6.4rem;
+
+    span {
+      font-size: 1.6rem;
+      font-weight: 300;
+      line-height: 2.4rem;
+      letter-spacing: 3.5px;
+      display: block;
+      text-transform: uppercase;
+
+      .accent__text {
+        display: inline;
+      }
+    }
+
+    h2 {
+      font-size: 5.6rem;
+      font-weight: 600;
+      line-height: 5.2rem;
+      letter-spacing: -0.1rem;
+    }
+  }
+
+  &__features {
+    max-width: 50%;
+
+    @include respond(laptop) {
+      max-width: 100%;
+      display: flex;
+    }
+
+    @include respond(tablet-port) {
+      flex-direction: column;
+    }
+  }
+
+  &__feature {
+    color: var(--cl-g-900);
+    padding: 3.2rem;
+    background-color: var(--cl-p-500);
+
+    &:not(:last-child) {
+      margin-bottom: 4.8rem;
+
+      @include respond(laptop) {
+        margin-bottom: 0;
+        margin-right: 4.8rem;
+      }
+
+      @include respond(tablet-port) {
+        margin-right: 0;
+        margin-bottom: 4.8rem;
+      }
+    }
+
+    h4 {
+      line-height: 2.4rem;
+      text-transform: uppercase;
+      font-weight: 300;
+      letter-spacing: 0.16em;
+      margin-bottom: 0.8rem;
+    }
+
+    p {
+      font-weight: 400;
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.download {
+  &__section {
+    padding: 16rem 0;
+    background-color: var(--cl-g-700);
+
+    @include respond(tablet-land) {
+      padding: 8.8rem 0;
+    }
+
+    @include respond(phone) {
+      padding: 6.4rem 0;
+    }
+
+    h2 {
+      max-width: 104rem;
+      font-size: clamp(3.2rem, 6vw, 6.4rem);
+      font-weight: 400;
+      line-height: clamp(4.8rem, 7.2vw, 8rem);
+      margin-bottom: 5.6rem;
+
+      @include respond(phone) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__cta {
+    display: flex;
+    align-items: center;
+
+    @include respond(phone) {
+      justify-content: center;
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2.4rem;
+    }
+  }
+}
+
+.join-community {
+  background-image: linear-gradient(
+      rgba(22, 22, 24, 0.8),
+      rgba(22, 22, 24, 0.8)
+    ),
+    url(../assets/bg-01.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10.4rem 0;
+  text-align: center;
+
+  @include respond(tablet-land) {
+    padding: 8.8rem 0;
+  }
+
+  // @include respond(phone) {
+  //   padding: 6.4rem 0;
+  // }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2 {
+    font-size: clamp(4rem, 6vw, 6.4rem);
+    font-weight: 400;
+    line-height: clamp(5.6rem, 7.2vw, 8rem);
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    max-width: 60rem;
+    margin: 0 auto 4.8rem;
+  }
+}

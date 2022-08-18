@@ -1,13 +1,15 @@
 import { useState } from "react";
-import Heading from "./components/Heading";
-// import { Container } from "@nextui-org/react";
+// import Button from "./components/Button";
+// import Heading from "./components/Heading";
+// import Icon from "./components/Icon";
+
+import HomePage from "./pages/HomePage";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      <Heading className="heading__display">
+      <HomePage />
+      {/* <Heading className="heading__display">
         Premium hub for african talents.
       </Heading>
       <Heading size={2}>Premium hub for african talents.</Heading>
@@ -23,7 +25,12 @@ function App() {
         quasi excepturi dolor id est adipisci obcaecati molestias voluptatibus
         quod temporibus quo, delectus unde dolorum accusantium ex officiis hic
         natus exercitationem?
-      </p>
+      </p> */}
+
+      {/* <Button className="btn btn__primary">
+        <Icon size={24} name={"music"} />
+        <span>Play Music</span>
+      </Button> */}
     </div>
   );
 }

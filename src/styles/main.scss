@@ -1,8 +1,17 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  // max-width: 1280px;
+  // margin: 0 auto;
+  // padding: 1.6rem;
   // text-align: center;
 }
 
 @import "./base/typo.scss";
+
+@import "./components/icon";
+@import "./components/button";
+@import "./components/navigation";
+@import "./components/footer";
+
+@import "./layouts/grid";
+
+@import "./pages/homepage";

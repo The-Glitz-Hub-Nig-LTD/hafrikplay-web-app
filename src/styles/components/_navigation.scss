@@ -1,0 +1,97 @@
+.navbar {
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: center;
+  padding-top: 1.2rem;
+  position: relative;
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.6rem;
+    border-radius: 0.8rem;
+  }
+
+  &__logo {
+    width: fit-content;
+  }
+
+  &__links {
+    display: flex;
+
+    @include respond(tablet-land) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+
+  &__links ~ .btn {
+    @include respond(tablet-land) {
+      width: 100%;
+      grid-column: 1 / -1;
+      grid-row: 3;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    color: var(---cl-white);
+    padding: 0.8rem 1.2rem;
+    transition: all 0.4s;
+
+    &:not(:last-child) {
+      margin-right: 2.4rem;
+
+      @include respond(tablet-land) {
+        margin-right: 0;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &:hover {
+      color: var(---cl-cultured);
+    }
+  }
+
+  &__mobile {
+    @include respond(tablet-land) {
+      display: grid;
+      grid-template-columns: 11.2rem 1fr;
+      grid-template-rows: auto auto auto;
+      gap: 2.4rem;
+      position: absolute;
+      background-color: var(--cl-g-900);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 95%;
+      // display: none;
+    }
+  }
+
+  &__hamburger {
+    display: none;
+
+    @include respond(tablet-land) {
+      display: flex;
+      flex-direction: column;
+      grid-column: 2;
+      justify-self: end;
+      cursor: pointer;
+    }
+
+    span {
+      display: inline-block;
+      width: 3rem;
+      height: 0.2rem;
+      background-color: var(--cl-white);
+      margin-bottom: 0.7rem;
+      border-radius: 10rem;
+    }
+  }
+}
