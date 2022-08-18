@@ -31,7 +31,7 @@ function ListenToMusic() {
           <Heading size={2}>
             <span>
               {" "}
-              <span className="accent__text">Personalize</span> listening
+              <span className="accent__text">Personalized</span> listening
             </span>
             Xperience
           </Heading>
