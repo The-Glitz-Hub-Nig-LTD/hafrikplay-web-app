@@ -7,12 +7,16 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  max-height: 66.4rem;
+  // height: 100vh;
+  // max-height: 66.4rem;
 
   // border: 0.01rem solid transparent;
   &__hero {
-    margin-top: 20vh;
+    padding: 20vh 0;
+
+    @include respond(tablet-port) {
+      padding: 20vh 0 15vh;
+    }
 
     h1 {
       margin-bottom: 1.2rem;
