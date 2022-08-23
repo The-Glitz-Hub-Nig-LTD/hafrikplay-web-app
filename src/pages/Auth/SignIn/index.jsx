@@ -29,7 +29,7 @@ function SignIn() {
 
       <div className="container">
         <div className="signin__caption">
-          <Heading size={3}>Login to Hafrikplay</Heading>
+          <Heading size={4}>Login to Hafrikplay</Heading>
         </div>
 
         <Formik

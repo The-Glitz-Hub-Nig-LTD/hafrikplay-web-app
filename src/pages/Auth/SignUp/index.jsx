@@ -39,7 +39,7 @@ function SignUp() {
 
       <div className="container">
         <div className="signup__caption">
-          <Heading size={3}>Start listening for free by signing up.</Heading>
+          <Heading size={4}>Start listening for free by signing up.</Heading>
         </div>
 
         <Formik
