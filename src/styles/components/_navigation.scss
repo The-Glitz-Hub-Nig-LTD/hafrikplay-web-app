@@ -93,7 +93,9 @@
   }
 
   &__hidden {
-    display: none;
+    @include respond(tablet-land) {
+      display: none;
+    }
   }
 
   &__hamburger {

@@ -55,11 +55,14 @@
   --cl-white: hsl(0, 0%, 100%);
   --cl-cultured: hsl(0, 0%, 99%);
 
+  // Errors {
+  --cl-error: hsl(0, 79%, 63%);
+
   // Box Shadows
   --bx-sd-01: 0 0.3rem 0.6rem hsla(0, 0%, 0%, 0.16);
   --bx-sd-02: 0 1.5rem 2rem hsla(0, 0%, 0%, 0.1);
   --bx-sd-03: 0 3rem 4rem hsla(0, 0%, 0%, 0.05);
   --bx-sd-04: 0 2.5rem 5rem hsla(155, 89%, 51%, 0.15);
 
-  // Spacing
+  //
 }

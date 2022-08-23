@@ -1,0 +1,13 @@
+.signin {
+  &__caption {
+    @extend .signup__caption;
+  }
+
+  &__forgot {
+    font-weight: 600;
+    display: inline-block;
+    color: var(---cl-white);
+    text-decoration: underline;
+    margin-bottom: 4rem !important;
+  }
+}

@@ -9,6 +9,49 @@
     }
   }
 
+  &__auth {
+    & > .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 4.8rem 0;
+
+      @include respond(md-laptop) {
+        padding: 4.8rem 1.6rem;
+      }
+
+      @include respond(tablet-land) {
+        flex-direction: column;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+
+      @include respond(tablet-land) {
+        flex-direction: column;
+        align-items: center;
+        margin: 2.4rem 0;
+        // justify-content: space-between;
+      }
+
+      & > *:not(:last-child) {
+        margin-right: 2.4rem;
+
+        @include respond(tablet-land) {
+          margin-right: 0;
+          margin-bottom: 2.4rem;
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: var(---cl-white);
+    }
+  }
+
   &__left {
     flex-basis: 36rem;
     flex-shrink: 2;

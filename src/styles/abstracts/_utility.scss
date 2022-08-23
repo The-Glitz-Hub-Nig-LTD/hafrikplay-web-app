@@ -1,0 +1,10 @@
+.border-right {
+  display: inline-block;
+  border-right: 1px solid var(--cl-white);
+  padding-right: 6.4rem;
+
+  @include respond(tablet-land) {
+    border: none;
+    padding-right: 0;
+  }
+}

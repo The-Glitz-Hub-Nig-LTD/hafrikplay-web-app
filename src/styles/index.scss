@@ -52,8 +52,20 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .accent__text {
   color: var(--cl-p-500);
+}
+
+.center__text {
+  text-align: center;
+}
+
+.center__container {
+  margin: 0 auto;
 }
 
 @import "./main.scss";

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Heading from "../Heading";
 
@@ -10,7 +10,12 @@ import instagram from "../../assets/instagram.svg";
 import linkedin from "../../assets/linkedin.svg";
 
 function Footer() {
-  return (
+  const { pathname } = useLocation();
+  console.log(pathname);
+
+  // const routes = []
+
+  return pathname === "/" ? (
     <footer className="footer">
       <div className="container">
         <div className="footer__footer">
@@ -102,6 +107,39 @@ function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </footer>
+  ) : (
+    <footer className="footer__auth">
+      <div className="container">
+        <p>Hafrikplay Copyright © 2022</p>
+
+        <ul>
+          <li>
+            <Link to={"#"}>Privacy policy</Link>
+          </li>
+          <li>
+            <Link to={"#"}> Terms and Conditions</Link>
+          </li>
+          <li>
+            <Link to={"#"}>Download</Link>
+          </li>
+        </ul>
+
+        <div className="footer__socials">
+          <a href="#" className="footer__link">
+            <img src={facebook} alt="Facebook Icon" />
+          </a>
+          <a href="#" className="footer__link">
+            <img src={twitter} alt="Twitter Icon" />
+          </a>
+          <a href="#" className="footer__link">
+            <img src={instagram} alt="Instagram Icon" />
+          </a>
+          <a href="#" className="footer__link">
+            <img src={linkedin} alt="LinkedIn Icon" />
+          </a>
         </div>
       </div>
     </footer>

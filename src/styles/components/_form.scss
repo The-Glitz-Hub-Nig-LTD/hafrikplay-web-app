@@ -1,0 +1,61 @@
+.form {
+  max-width: 47.5rem;
+  margin: 0 auto;
+  border-radius: 0.8rem;
+  padding: 6.4rem 4rem;
+  background-color: var(--cl-g-700);
+
+  @include respond(phone) {
+    padding: 4rem 1.6rem;
+  }
+
+  & > *:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  &__inputfield {
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--cl-g-100);
+      width: 100%;
+      margin-bottom: 0.2rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 1.2rem 1.6rem;
+      outline: none;
+      border: none;
+      color: var(--cl-g-100);
+      border-radius: 0.6rem;
+      background-color: var(--cl-g-800);
+      box-shadow: 0 0 0 0.1rem hsla(240, 4%, 61%, 1);
+      transition: all 0.4s;
+
+      &:focus {
+        box-shadow: 0 0 0 0.16rem hsl(240, 4%, 55%, 1);
+      }
+    }
+  }
+
+  &__inputfield.error {
+    border: none;
+    color: var(--cl-error);
+
+    label {
+      color: var(--cl-error);
+    }
+
+    input {
+      // box-shadow: 0 0 0 0.1rem hsl(0, 100%, 50%);
+      color: var(--cl-error);
+    }
+  }
+}

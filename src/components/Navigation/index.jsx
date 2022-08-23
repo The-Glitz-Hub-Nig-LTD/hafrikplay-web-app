@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import Icon from "../Icon";
 import Button from "../Button";
@@ -8,6 +8,8 @@ import logo from "../../assets/logo.svg";
 
 function Navigation() {
   const [openMenu, setOpenMenu] = useState(false);
+  const { pathname } = useLocation();
+  console.log(pathname);
 
   // Reference to DOM elements
   const menuRef = useRef();
@@ -45,15 +47,23 @@ function Navigation() {
               <Link className="navbar__link" to="#">
                 Support
               </Link>
-              <Link className="navbar__link" to="#">
+              <Link className="navbar__link border-right margin-right" to="#">
                 Download
               </Link>
             </div>
 
-            <Button className="btn btn__primary">
-              <Icon size={24} name={"person-outline"} />
-              <span>Login</span>
-            </Button>
+            {pathname === "/" && (
+              <Link className="navbar__link" to="/signup">
+                Sign Up
+              </Link>
+            )}
+
+            <Link to={pathname === "/login" ? "/signup" : "/login"}>
+              <Button className="btn btn__primary">
+                <Icon size={24} name={"person-outline"} />
+                <span>{pathname === "/login" ? "Sign Up" : "Login"}</span>
+              </Button>
+            </Link>
 
             <div className="navbar__close" ref={closeMenuRef}>
               <span>&nbsp;</span>

@@ -4,8 +4,13 @@
   justify-content: center;
   align-items: center;
   padding: 1.2rem 3.2rem;
-  border-radius: 0.4rem;
+  border-radius: 10rem;
   cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: var(--cl-g-900);
+  }
 
   & > *:not(:last-child) {
     margin-right: 0.8rem;
@@ -26,6 +31,13 @@
     }
   }
 
+  &__secondary {
+    font-weight: 600;
+    color: var(--cl-g-700);
+    background-color: var(--cl-g-100);
+    padding: 1.6rem 4.8rem;
+  }
+
   &__dark {
     background-color: var(--cl-g-900);
     color: var(--cl-white);
@@ -34,5 +46,9 @@
   &__no-bg {
     background: none;
     padding: 0;
+  }
+
+  &__full-width {
+    width: 100%;
   }
 }
