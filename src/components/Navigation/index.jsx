@@ -55,7 +55,7 @@ function Navigation() {
             </div>
 
             {pathname === "/" && (
-              <Link className="navbar__link" to="/signup">
+              <Link className="navbar__link margin-bottom-0" to="/signup">
                 Sign Up
               </Link>
             )}
