@@ -31,7 +31,9 @@ function Navigation() {
       <div className="container">
         <div className="navbar__nav">
           <div className="navbar__logo">
-            <img src={logo} alt="Hafrikplay logo" />
+            <Link to="/">
+              <img src={logo} alt="Hafrikplay logo" />
+            </Link>
           </div>
 
           <div
@@ -47,7 +49,7 @@ function Navigation() {
               <Link className="navbar__link" to="#">
                 Support
               </Link>
-              <Link className="navbar__link border-right margin-right" to="#">
+              <Link className="navbar__link" to="#">
                 Download
               </Link>
             </div>
