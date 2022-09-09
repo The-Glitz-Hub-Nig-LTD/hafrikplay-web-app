@@ -1,9 +1,16 @@
 .icon {
-  stroke: #ffffff !important;
-  color: #ffffff !important;
+  stroke: var(--cl-white);
 
-  path {
-    stroke: #ffffff !important;
-    color: #ffffff !important;
+  &__primary {
+    stroke: var(--cl-white);
+    transition: all 0.2s;
+
+    &:hover {
+      stroke: var(--cl-p-500);
+    }
+  }
+
+  &__dark {
+    stroke: var(--cl-g-900);
   }
 }

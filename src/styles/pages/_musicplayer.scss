@@ -1,0 +1,51 @@
+.music-player {
+  display: grid;
+  grid-template-columns: 25rem 1fr;
+  // grid-template-rows: calc(100vh - 9.8rem) 9.8rem;
+  column-gap: 2.4rem;
+  max-height: 100vh;
+
+  @include respond(laptop) {
+    grid-template-columns: 23rem 1fr;
+  }
+
+  &__sidebar {
+    background-color: var(--cl-g-800);
+    min-height: 100vh;
+    grid-column: 1 / 2;
+    transition: all 0.4s;
+    padding: 2.4rem;
+    padding-right: 0;
+    position: fixed;
+    width: 25rem;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    @include respond(phone) {
+      transform: translateX(-1000px);
+    }
+  }
+
+  &__main {
+    background-color: var(--cl-g-900);
+  }
+
+  &__controls {
+    background-color: var(--cl-g-800);
+    max-height: 9.8rem;
+    height: 9.8rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    // display: none;
+
+    @include respond(phone) {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}

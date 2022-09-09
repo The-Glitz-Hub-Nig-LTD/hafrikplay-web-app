@@ -12,6 +12,8 @@
 @import "./components/navigation";
 @import "./components/footer";
 @import "./components/form";
+@import "./components/sidebar";
+@import "./components/list";
 
 @import "./layouts/grid";
 
@@ -22,5 +24,6 @@
 @import "./pages/resetpassword";
 @import "./pages/success";
 @import "./pages/checkemail";
+@import "./pages/musicplayer";
 
 @import "./abstracts/utility";

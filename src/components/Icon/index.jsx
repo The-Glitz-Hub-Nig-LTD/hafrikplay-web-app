@@ -2,9 +2,9 @@ import React from "react";
 
 import spriteSvg from "../../assets/sprite.svg";
 
-function Icon({ size, name }) {
+function Icon({ size, name, className }) {
   return (
-    <svg width={size} height={size}>
+    <svg className={className} width={size} height={size}>
       <use xlinkHref={`${spriteSvg}#${name}`} />
     </svg>
   );

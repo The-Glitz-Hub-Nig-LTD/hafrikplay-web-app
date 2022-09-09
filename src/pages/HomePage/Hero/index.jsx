@@ -19,7 +19,7 @@ function Hero() {
             Discover, stream and share in a constantly expanding mix of music.
           </p>
           <Button className="btn btn__primary">
-            <Icon size={24} name={"music"} />
+            <Icon className="icon__dark" size={24} name={"music"} />
             <span>Play Music</span>
           </Button>
         </div>
