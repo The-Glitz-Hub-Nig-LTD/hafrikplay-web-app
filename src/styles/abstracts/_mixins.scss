@@ -46,3 +46,17 @@
     }
   }
 }
+
+// Bottom spacing for items except for last item
+
+@mixin notLastItem($gap, $dir: btm) {
+  @if $dir == btm {
+    &:not(:last-child) {
+      margin-bottom: $gap;
+    }
+  } @else {
+    &:not(:last-child) {
+      margin-right: $gap;
+    }
+  }
+}

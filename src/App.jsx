@@ -10,9 +10,12 @@ import CheckEmail from "./pages/Auth/CheckEmail";
 import ResetPassword from "./pages/Auth/ResetPassword";
 import Success from "./pages/Auth/Success";
 
+import MusicPlayer from "./pages/MusicPlayer";
+import Trending from "./pages/MusicPlayer/Trending/index.";
+
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <Routes>
         <Route exact path="/" element={<HomePage />} />
         {/* Auth Pages */}
@@ -22,6 +25,10 @@ function App() {
         <Route exact path="/new-password" element={<ResetPassword />} />
         <Route exact path="/reset-success" element={<Success />} />
         <Route exact path="/check-email" element={<CheckEmail />} />
+
+        <Route exact path="/app" element={<MusicPlayer />}>
+          <Route exact path="trending" element={<Trending />} />
+        </Route>
       </Routes>
     </div>
   );

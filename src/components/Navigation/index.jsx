@@ -62,7 +62,11 @@ function Navigation() {
 
             <Link to={pathname === "/login" ? "/signup" : "/login"}>
               <Button className="btn btn__primary">
-                <Icon size={24} name={"person-outline"} />
+                <Icon
+                  className="icon__dark"
+                  size={24}
+                  name={"person-outline"}
+                />
                 <span>{pathname === "/login" ? "Sign Up" : "Login"}</span>
               </Button>
             </Link>

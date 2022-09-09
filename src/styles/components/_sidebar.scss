@@ -1,0 +1,55 @@
+.sidebar {
+  &__logo {
+    width: 10.4rem;
+    margin-bottom: 2.4rem;
+
+    img {
+      margin-left: 0.8rem;
+    }
+  }
+
+  &__container {
+    overflow-y: scroll;
+    height: calc(100vh - 5.7rem);
+    padding-bottom: 16rem;
+  }
+
+  &__group {
+    @include notLastItem(2.4rem);
+
+    h5 {
+      font-weight: var(--fw-600);
+      color: var(--cl-p-700);
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: var(--cl-white);
+    padding: 0.8rem 1.6rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    @include notLastItem(0.4rem);
+
+    &:hover {
+      color: var(--cl-p-500);
+    }
+
+    & > * {
+      @include notLastItem(1.2rem, rgt);
+    }
+  }
+
+  &__item:hover {
+    .icon__primary {
+      stroke: var(--cl-p-500);
+    }
+  }
+}

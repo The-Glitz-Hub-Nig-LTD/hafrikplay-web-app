@@ -1,4 +1,9 @@
 .success {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
   &__caption {
     @extend .signup__caption;
     max-width: 40rem;
