@@ -1,4 +1,5 @@
 import React from "react";
+import { useMatch } from "react-router-dom";
 
 import logo from "../../../assets/logo-white.svg";
 
@@ -7,7 +8,7 @@ import List from "../../../components/List";
 import SideBarTab from "../../../components/SideBarTab";
 
 function SideBar() {
-  const match = useMatchLocation();
+  // const match = useMatch();
   return (
     <aside className="music-player__sidebar">
       <div className="sidebar__logo">

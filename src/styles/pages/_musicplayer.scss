@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 25rem 1fr;
   // grid-template-rows: calc(100vh - 9.8rem) 9.8rem;
-  column-gap: 2.4rem;
+  // column-gap: 2.4rem;
   max-height: 100vh;
 
   @include respond(laptop) {
@@ -30,16 +30,23 @@
 
   &__main {
     background-color: var(--cl-g-900);
+    grid-column: 2 / -1;
+
+    display: grid;
+    grid-template-rows: 9.6rem 1fr;
+    gap: 0.2rem;
+    // overflow: scroll;
   }
 
   &__controls {
-    background-color: var(--cl-g-800);
+    background-color: var(--cl-g-700);
     max-height: 9.8rem;
     height: 9.8rem;
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 3;
 
     // display: none;
 

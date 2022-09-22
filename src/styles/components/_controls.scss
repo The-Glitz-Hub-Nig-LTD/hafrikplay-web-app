@@ -1,0 +1,66 @@
+.control {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.4rem;
+  }
+
+  &__group {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+
+    & > * {
+      @include notLastItem(2.4rem, rgt);
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--cl-p-500);
+    border-radius: 10rem;
+  }
+
+  &__play-pause {
+    cursor: pointer;
+  }
+}
+
+.track {
+  &--playing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: fit-content;
+
+    & > * {
+      @include notLastItem(0.8rem, rgt);
+    }
+  }
+
+  &--details {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      font-size: 1.4rem;
+      font-weight: var(--fw-600);
+
+      &:last-child {
+        font-weight: var(--fw-300);
+        color: #fcfcfc;
+      }
+
+      @include notLastItem(0.1rem);
+    }
+  }
+}

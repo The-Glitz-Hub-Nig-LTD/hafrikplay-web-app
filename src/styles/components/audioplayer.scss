@@ -1,0 +1,98 @@
+.audioplayer {
+  &__progress-indictator {
+    display: flex;
+    align-items: center;
+
+    & > * {
+      @include notLastItem(0.8rem, rgt);
+    }
+  }
+
+  &__range {
+    --seek-before-width: 0;
+    --seek-before-color: var(--cl-p-500);
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-color: var(--cl-g-500);
+
+    height: 4px;
+    width: 29.2;
+    border-radius: 1.6rem;
+    position: relative;
+    cursor: pointer;
+
+    &::-webkit-slider-runnable-track {
+      background-color: var(--cl-g-500);
+      height: 4px;
+      width: 100%;
+      border-radius: 1.6rem;
+      position: relative;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &::-moz-range-track {
+      background-color: var(--cl-g-500);
+      height: 4px;
+      width: 100%;
+      border-radius: 1.6rem;
+      position: relative;
+      outline: none;
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      height: 4px;
+      width: var(--seek-before-width);
+      background-color: var(--seek-before-color);
+      border-radius: 1.6rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    &::-moz-range-progress {
+      background-color: var(--seek-before-color);
+      border-radius: 1.6rem;
+      height: 4px;
+    }
+
+    &::-webkit-slider-thumb {
+      // display: none;
+      -webkit-appearance: none;
+      height: 4px;
+      width: var(--seek-before-width);
+      background-color: var(--seek-before-color);
+      border-radius: 1.6rem;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::-moz-range-thumb {
+      // display: none;
+      height: 4px;
+      width: var(--seek-before-width);
+      background-color: var(--seek-before-color);
+      border-radius: 1.6rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__currenttime,
+  &__duration {
+    font-size: 1.4rem;
+    font-weight: var(--fw-600);
+    color: var(--cl-g-100);
+  }
+}

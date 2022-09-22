@@ -12,3 +12,12 @@
 .margin-bottom-0 {
   margin-bottom: 0 !important;
 }
+
+.rotate-180 {
+  transform: rotate(0deg) !important;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: rotate(180deg) !important;
+  }
+}
