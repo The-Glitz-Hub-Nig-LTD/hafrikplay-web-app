@@ -1,0 +1,38 @@
+.MuiSlider-sizeSmall {
+  height: 3px !important;
+  color: var(--cl-white) !important;
+}
+
+.MuiSlider-thumbSizeSmall {
+  width: 0.8rem !important;
+  height: 0.8rem !important;
+}
+
+.MuiSlider-rail {
+  background: var(--cl-g-500) !important;
+  opacity: 1 !important;
+}
+
+.MuiSlider-track {
+  background: var(--cl-p-500) !important;
+}
+
+.MuiSlider-thumb {
+  &:hover,
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+.Mui-active {
+  box-shadow: none !important;
+
+  &:hover,
+  &:active {
+    box-shadow: none !important;
+  }
+}
+
+.css-14gf62f-MuiSlider-thumb.Mui-focusVisible {
+  box-shadow: none !important;
+}

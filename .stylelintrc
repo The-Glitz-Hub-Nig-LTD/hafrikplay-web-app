@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "block-closing-brace-space-afte": "always",
+    "color-no-invalid-hex": true,
+    "max-nesting-depth": 4,
+    "unit-allowed-list": ["rem", "%", "s", "vh", "vw"]
+  }
+}

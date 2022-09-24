@@ -18,6 +18,11 @@
 
   &__icon {
     cursor: pointer;
+
+    &--active,
+    &:hover {
+      stroke: var(--cl-p-500);
+    }
   }
 
   &__btn {
@@ -32,6 +37,21 @@
 
   &__play-pause {
     cursor: pointer;
+  }
+
+  &__volume {
+    display: flex;
+    align-items: center;
+    width: 10.6rem;
+
+    & > * {
+      flex-shrink: 0;
+      @include notLastItem(1.2rem, rgt);
+    }
+
+    & > *:last-child {
+      flex-shrink: 1;
+    }
   }
 }
 

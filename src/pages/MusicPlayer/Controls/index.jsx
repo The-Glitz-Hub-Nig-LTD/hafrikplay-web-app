@@ -3,9 +3,21 @@ import React, { useEffect, useRef } from "react";
 import thumbnail from "../../../assets/track-thumbnail.png";
 import Icon from "../../../components/Icon";
 import AudioPlayer from "../AudioPlayer";
+import Slider from "@mui/material/Slider";
+
+export const toggleActiveState = (e) => {
+  const elem = e.target.closest(".control__icon");
+  console.log(elem);
+
+  if (elem) elem.classList.toggle("control__icon--active");
+};
 
 function Controls() {
   const controlContainerRef = useRef();
+
+  const addToFavourites = (e) => {
+    toggleActiveState(e);
+  };
 
   useEffect(() => {
     // controlContainerRef.current.addEventListener("click", (e) => {
@@ -36,6 +48,7 @@ function Controls() {
             className={`icon control__icon`}
             name="heart-outline"
             size={20}
+            onClick={(e) => addToFavourites(e)}
           />
         </div>
 
@@ -43,7 +56,19 @@ function Controls() {
           <AudioPlayer />
         </div>
 
-        <div className="control__group">kk</div>
+        <div className="control__group">
+          <Icon className="icon control__icon" name="note-square" size={20} />
+
+          <div className="control__volume">
+            <Icon className="icon" name="volume-low" size={20} />
+            <Slider
+              size="small"
+              defaultValue={0}
+              aria-label="Small"
+              valueLabelDisplay="off"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

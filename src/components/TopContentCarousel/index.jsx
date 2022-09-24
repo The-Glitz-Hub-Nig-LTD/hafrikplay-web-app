@@ -13,11 +13,21 @@ function TopContentCarousel() {
   return (
     <div className="top-content-carousel">
       <div className="top-carousel-group">
-        <CarouselCard logo={logo} carouselImg={carouselImg01} />
-        <CarouselCard logo={logo} carouselImg={carouselImg02} />
-        <CarouselCard logo={logo} carouselImg={carouselImg03} />
-        <CarouselCard logo={logo} carouselImg={carouselImg04} />
-        <CarouselCard logo={logo} carouselImg={carouselImg05} />
+        <div className="top-carousel-group__item">
+          <CarouselCard logo={logo} carouselImg={carouselImg01} />
+        </div>
+        <div className="top-carousel-group__item">
+          <CarouselCard logo={logo} carouselImg={carouselImg02} />
+        </div>
+        <div className="top-carousel-group__item">
+          <CarouselCard logo={logo} carouselImg={carouselImg03} />
+        </div>
+        <div className="top-carousel-group__item">
+          <CarouselCard logo={logo} carouselImg={carouselImg04} />
+        </div>
+        <div className="top-carousel-group__item">
+          <CarouselCard logo={logo} carouselImg={carouselImg05} />
+        </div>
       </div>
     </div>
   );

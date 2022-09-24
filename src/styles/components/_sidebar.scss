@@ -42,6 +42,14 @@
       color: var(--cl-p-500);
     }
 
+    &--active {
+      color: var(--cl-p-500);
+
+      .icon__primary {
+        stroke: var(--cl-p-500);
+      }
+    }
+
     & > * {
       @include notLastItem(1.2rem, rgt);
     }

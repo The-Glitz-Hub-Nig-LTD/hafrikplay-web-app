@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useMatch } from "react-router-dom";
 
 import logo from "../../../assets/logo-white.svg";
@@ -8,19 +8,34 @@ import List from "../../../components/List";
 import SideBarTab from "../../../components/SideBarTab";
 
 function SideBar() {
-  // const match = useMatch();
+  const sidebarRef = useRef();
+
+  const activeSidebarHandler = (e) => {
+    const elem = e.target.closest(".sidebar__item");
+    const tabs = Array.from(
+      sidebarRef.current.querySelectorAll(".sidebar__item")
+    );
+
+    tabs.forEach((tab) => tab.classList.remove("sidebar__item--active"));
+    elem.classList.add("sidebar__item--active");
+  };
+
   return (
     <aside className="music-player__sidebar">
       <div className="sidebar__logo">
         <img src={logo} alt="Hafrikplay logo" />
       </div>
 
-      <div className="sidebar__container">
+      <div
+        className="sidebar__container"
+        onClick={activeSidebarHandler}
+        ref={sidebarRef}
+      >
         <div className="sidebar__group">
           <Heading size={5}>Music</Heading>
           <List className="sidebar__list">
             <SideBarTab
-              route="#"
+              route="home"
               name="Home"
               iconClass="icon__primary"
               iconSize={20}
@@ -28,7 +43,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/trending"
+              route="trending"
               name="Trending"
               iconClass="icon__primary"
               iconSize={20}
@@ -36,7 +51,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/top-music"
+              route="top-music"
               name="Top Music"
               iconClass="icon__primary"
               iconSize={20}
@@ -44,7 +59,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/blog"
+              route="blog"
               name="Blog"
               iconClass="icon__primary"
               iconSize={20}
@@ -52,7 +67,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/discover"
+              route="discover"
               name="Discover"
               iconClass="icon__primary"
               iconSize={20}
@@ -60,7 +75,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/genres"
+              route="genres"
               name="Genres"
               iconClass="icon__primary"
               iconSize={20}
@@ -68,7 +83,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/albums"
+              route="albums"
               name="Albums"
               iconClass="icon__primary"
               iconSize={20}
@@ -89,7 +104,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/playlist"
+              route="playlist"
               name="Playlist"
               iconClass="icon__primary"
               iconSize={20}
@@ -97,7 +112,7 @@ function SideBar() {
             />
 
             <SideBarTab
-              route="/uploads"
+              route="uploads"
               name="Uploads"
               iconClass="icon__primary"
               iconSize={20}
@@ -110,7 +125,7 @@ function SideBar() {
           <Heading size={5}>Events</Heading>
           <List className="sidebar__list">
             <SideBarTab
-              route="/events"
+              route="events"
               name="Events"
               iconClass="icon__primary"
               iconSize={20}

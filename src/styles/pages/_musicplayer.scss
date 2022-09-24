@@ -1,9 +1,8 @@
 .music-player {
   display: grid;
   grid-template-columns: 25rem 1fr;
-  // grid-template-rows: calc(100vh - 9.8rem) 9.8rem;
-  // column-gap: 2.4rem;
   max-height: 100vh;
+  overflow: hidden;
 
   @include respond(laptop) {
     grid-template-columns: 23rem 1fr;
@@ -35,7 +34,6 @@
     display: grid;
     grid-template-rows: 9.6rem 1fr;
     gap: 0.2rem;
-    // overflow: scroll;
   }
 
   &__controls {
@@ -45,7 +43,7 @@
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     z-index: 3;
 
     // display: none;

@@ -9,65 +9,28 @@ import Icon from "../../components/Icon";
 import ProfileCard from "../../components/ProfileCard";
 
 import MainNav from "../../components/MainNav";
-import MainContainer from "../../components/MainContainer";
+import MainContainer from "../../Layout/MainContainer";
 import TopContentCarousel from "../../components/TopContentCarousel";
 import RowContainer from "../../Layout/RowContainer";
+
+import cardImg from "../../assets/card-img.png";
+import cardImg01 from "../../assets/card-img-01.png";
+import cardImg02 from "../../assets/card-img-02.png";
+import cardImg03 from "../../assets/card-img-03.png";
+import cardImg04 from "../../assets/card-img-04.png";
 
 function MusicPlayer() {
   return (
     <div className="music-player">
       <SideBar />
+
       <Main>
         <MainNav />
-
-        {/* MainContainer */}
         <MainContainer>
-          <TopContentCarousel />
-
-          {/* Row content carousel */}
-
-          <RowContainer>
-            <Card cardStyle="overlay" playIcon />
-
-            <Card cardStyle="normal" explictContent />
-            <Card cardStyle="overlay" />
-          </RowContainer>
+          <Outlet />
         </MainContainer>
-
-        {/* <div className="row">
-          <Card cardStyle="overlay" playIcon />
-
-          <Card cardStyle="normal" explictContent />
-          <Card cardStyle="overlay" />
-          <Card
-            cardStyle="overlay"
-            playIcon
-            icon={
-              <div className="card__icon card__icon--left">
-                <Icon className="icon" name="headphone" size={16} />
-
-                <span className="icon--meta text--tiny">234</span>
-              </div>
-            }
-          />
-
-          <Card
-            explictContent
-            type="playlist"
-            cardStyle="normal"
-            playIcon
-            icon={
-              <div className="card__icon card__icon--left">
-                <Icon className="icon" name="headphone" size={16} />
-
-                <span className="icon--meta text--tiny">234</span>
-              </div>
-            }
-          />
-
-          <ProfileCard />
-        </div> */}
       </Main>
+
       <Controls />
     </div>
   );

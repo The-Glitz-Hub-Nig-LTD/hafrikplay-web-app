@@ -1,15 +1,28 @@
 import React from "react";
-import cardImg from "../../assets/card-img.png";
 import Icon from "../Icon";
 
-function Card({ type, playIcon, cardStyle, explictContent, icon }) {
+function Card({
+  imageUrl,
+  type,
+  playIcon,
+  cardStyle,
+  explictContent,
+  icon,
+  hover,
+}) {
   return (
-    <div className={`card card-squared card-squared--${type ? type : ""}`}>
+    <div
+      className={`card${type ? ` card--${type}` : ""}${
+        hover ? " card--is-hovered" : ""
+      }`}
+    >
       <div className="card__img">
-        <img src={cardImg} alt="Cover art thumbnail" />
+        <img src={imageUrl} alt="Cover art thumbnail" />
       </div>
 
-      <div className={`card__${cardStyle ? cardStyle : ""}`}>
+      <div
+        className={`card__content card__content--${cardStyle ? cardStyle : ""}`}
+      >
         {playIcon && (
           <div className="play-box">
             <Icon className="icon__dark" name="play" size={16} />
